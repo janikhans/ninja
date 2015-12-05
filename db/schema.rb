@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151205204927) do
+ActiveRecord::Schema.define(version: 20151205222104) do
 
   create_table "blocks", force: :cascade do |t|
     t.datetime "beginning"
-    t.datetime "end"
+    t.datetime "ending"
     t.string   "category"
     t.integer  "user_id"
     t.datetime "created_at", null: false
