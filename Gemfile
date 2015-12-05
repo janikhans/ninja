@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'devise'
+gem 'momentjs-rails'
+
+# Fullcalendar.io
+gem 'fullcalendar-rails', '~> 2.4', '>= 2.4.0.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
