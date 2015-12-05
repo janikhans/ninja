@@ -1,1 +1,1 @@
-json.extract! @block, :id, :beginning, :end, :category, :user_id, :created_at, :updated_at
+json.extract! @block, :id, :beginning, :ending, :category, :user_id, :created_at, :updated_at
