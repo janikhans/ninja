@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Beginning:</strong>
+  <%= @block.beginning %>
+</p>
+
+<p>
+  <strong>End:</strong>
+  <%= @block.end %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @block.category %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @block.user.email %>
+</p>
+
+<%= link_to 'Edit', edit_block_path(@block) %> |
+<%= link_to 'Back', blocks_path %>
