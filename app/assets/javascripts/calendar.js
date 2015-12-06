@@ -2,15 +2,25 @@
 $(document).ready(function() {
 
   $.getJSON('/blocks.json', function(data) {
-    for(obj in data){
-    console.log(data[obj]);
+    data.forEach
+
+    for(var i = 0; i < data.length; i ++){
+    console.log(data[i]);
       $('#calendar').fullCalendar({
-        // defaultView: 'basicWeek',
+        header: {
+  				left: 'prev,next today',
+  				center: 'title',
+  				right: 'month,agendaWeek,agendaDay'
+			   },
+        editable: true,
+        defaultView: 'basicWeek',
+        //
+        url: '/block.json',
         events: [
           {
-            title: data[obj].category,
-            start: data[obj].beginning,
-            end: data[obj].end
+            title: data[i].category,
+            start: data[i].beginning,
+            ending: data[i].end
           }
         ]
       })
