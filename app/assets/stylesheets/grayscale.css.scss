@@ -168,6 +168,22 @@ a:focus {
     font-size: 40px;
 }
 
+.brand-heading {
+color: rgba(255, 255, 255, 0.6);
+}
+
+.brand-heading:hover {
+color: rgba(255, 255, 255, 0.1);
+}
+
+.brand-heading1 {
+color: rgba(255, 255, 255, 0.1);
+}
+
+.brand-heading1:hover {
+color: rgba(255, 255, 255, 0.6);
+}
+
 .intro .intro-body .intro-text {
     font-size: 18px;
 }
@@ -182,21 +198,25 @@ a:focus {
         font-size: 100px;
     }
 
+    .brand-heading {
+    color: rgba(255, 255, 255, 0.6);
+    }
+
     .intro .intro-body .intro-text {
         font-size: 26px;
     }
 }
 
 .btn-circle {
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
     margin-top: 15px;
     padding: 7px 16px;
     border: 2px solid #fff;
     border-radius: 100%!important;
     font-size: 40px;
-    color: #fff;
-    background: 0 0;
+    background-image: url("https://ninjacalendar.files.wordpress.com/2015/12/ninjacalendar.jpg?w=274");
+    background-position: right 85px bottom -30px;
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
     transition: background .3s ease-in-out;
@@ -227,7 +247,7 @@ a:focus {
     -moz-animation-timing-function: linear;
 }
 
-@-webkit-keyframes pulse {    
+@-webkit-keyframes pulse {
     0% {
         -webkit-transform: scale(1);
         transform: scale(1);
@@ -244,7 +264,7 @@ a:focus {
     }
 }
 
-@-moz-keyframes pulse {    
+@-moz-keyframes pulse {
     0% {
         -moz-transform: scale(1);
         transform: scale(1);
