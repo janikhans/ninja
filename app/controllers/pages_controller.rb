@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
 
 	def welcome
+		@welcome = true
 	end
 
 	def calendar

@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
   get 'users/index'
-  resources :users, only: [:index]
+  devise_for :users, :path_names => {:sign_in => 'login', :sign_out => 'logout'}
+  resources :users, only: [:index, :show]
   resources :blocks
-  devise_for :users
   get 'calendar' => 'pages#calendar'
   root 'pages#welcome'
   # The priority is based upon order of creation: first created -> highest priority.
