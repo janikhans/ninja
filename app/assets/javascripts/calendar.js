@@ -1,9 +1,7 @@
 
 $(document).ready(function() {
 
-  $.getJSON('/blocks.json', function(data) {
-    for(var i = 0; i < data.length; i ++){
-    console.log(data[i]);
+  // $.getJSON('/blocks.json', function(data) {
       $('#calendar').fullCalendar({
         header: {
   				left: 'prev,next today',
@@ -12,18 +10,13 @@ $(document).ready(function() {
 			   },
         editable: true,
         defaultView: 'basicWeek',
-        //
-        url: '/block.json',
-        events: [
+        eventSources: [
           {
-            title: data[i].category,
-            start: data[i].beginning,
-            ending: data[i].end
+            url: '/blocks.json', // use the `url` property
+            color: 'yellow',    // an option!
+            textColor: 'black'  // an option!
           }
         ]
       })
-    }
-  });
-
-    // page is now ready, initialize the calendar...
+  // });
 });
