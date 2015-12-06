@@ -2,8 +2,6 @@
 $(document).ready(function() {
 
   $.getJSON('/blocks.json', function(data) {
-    data.forEach
-
     for(var i = 0; i < data.length; i ++){
     console.log(data[i]);
       $('#calendar').fullCalendar({
