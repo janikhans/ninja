@@ -4,7 +4,7 @@ class BlocksController < ApplicationController
   # GET /blocks
   # GET /blocks.json
   def index
-    @blocks = current_user.blocks.all
+    @blocks = Block.all
   end
 
   # GET /blocks/1
