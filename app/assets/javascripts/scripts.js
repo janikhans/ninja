@@ -24,14 +24,14 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){
-    $(".dropdown").hover(            
+    $(".dropdown").hover(
         function() {
             $('.dropdown-menu', this).not('.in .dropdown-menu').stop( true, true ).slideDown("fast");
-            $(this).toggleClass('open');        
+            $(this).toggleClass('open');
         },
         function() {
             $('.dropdown-menu', this).not('.in .dropdown-menu').stop( true, true ).slideUp("fast");
-            $(this).toggleClass('open');       
+            $(this).toggleClass('open');
         }
     );
 });
@@ -39,3 +39,9 @@ $(document).ready(function(){
 $(function () {
   $('[data-toggle="popover"]').popover()
 })
+
+
+$(".audioButton").on("click", function() {
+  $(".audio-play")[0].currentTime = 0;
+  return $(".audio-play")[0].play();
+});
