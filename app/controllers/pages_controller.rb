@@ -6,5 +6,6 @@ class PagesController < ApplicationController
 
 	def calendar
 		@blocks = current_user.blocks.all
+		@block = Block.new
 	end
 end

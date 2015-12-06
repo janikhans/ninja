@@ -28,7 +28,7 @@ class BlocksController < ApplicationController
 
     respond_to do |format|
       if @block.save
-        format.html { redirect_to @block, notice: 'Block was successfully created.' }
+        format.html { redirect_to calendar_path, notice: 'Block was successfully created.' }
         format.json { render :show, status: :created, location: @block }
       else
         format.html { render :new }
@@ -69,6 +69,6 @@ class BlocksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def block_params
-      params.require(:block).permit(:beginning, :end, :category, :user_id)
+      params.require(:block).permit(:beginning, :ending, :category, :user_id)
     end
 end

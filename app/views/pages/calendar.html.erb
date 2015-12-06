@@ -1,5 +1,42 @@
 <div id='calendar'></div>
 
+<%= form_for(@block) do |f| %>
+  <% if @block.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@block.errors.count, "error") %> prohibited this block from being saved:</h2>
+
+      <ul>
+      <% @block.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :beginning %><br>
+    <%= f.datetime_select :beginning %>
+  </div>
+  <div class="field">
+    <%= f.label :ending %><br>
+    <%= f.datetime_select :ending %>
+  </div>
+  <div class="field">
+    <%= f.label :category %><br>
+    <%= f.text_field :category %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
+
+
 <div class="container">
 <%= render partial: "shared/block", collection: @blocks %>
 
