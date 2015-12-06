@@ -13,6 +13,11 @@
     </div>
   <% end %>
 
+	<div class="field">
+    <h4>How long do you want to meet for?</h4>
+    <%= number_field_tag :something %>
+  </div>
+  <div>
   <div class="field">
     <%= f.label :beginning %><br>
     <%= f.datetime_select :beginning %>
@@ -29,9 +34,11 @@
     <%= f.label :user_id %><br>
     <%= f.text_field :user_id %>
   </div>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
+
 <% end %>
 
 

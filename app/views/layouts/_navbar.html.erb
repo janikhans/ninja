@@ -14,10 +14,9 @@
                 <ul class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <% if user_signed_in? %>
-                        <li><%= link_to "My Calendar", calendar_path %></li>
+                        <li><%= link_to "Group Calendar", calendar_path %></li>
                         <li><%= link_to "New Meeting" %></li>
-                      <li><%= link_to "Blocks", blocks_path %></li>
-                      <li><%= link_to "New Time Block", new_block_path %></li>
+                      
                       <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><%= current_user.name %> <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
