@@ -9,11 +9,13 @@ $(document).ready(function() {
   				right: 'month,agendaWeek,agendaDay'
 			   },
         editable: true,
-        defaultView: 'basicWeek',
+        defaultView: 'agendaWeek',
+        minTime: "06:00:00",
+        maxTime: "24:00:00",
         eventSources: [
           {
             url: '/blocks.json', // use the `url` property
-            color: 'yellow',    // an option!
+            //color: 'blue',    // an option!
             textColor: 'black'  // an option!
           }
         ]
