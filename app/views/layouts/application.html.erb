@@ -6,13 +6,16 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body class="no-trans">
+<body  id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
 	<%= render 'layouts/navbar' %>
-
+	<% if @welcome %>
+		<%= render 'layouts/header' %>
+	<% end %>
 		<p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+       	<p class="alert"><%= alert %></p>
 		<%= yield %>
+
 
 	<%= render 'layouts/footer' %>
 </body>
